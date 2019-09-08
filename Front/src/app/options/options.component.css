@@ -1,0 +1,46 @@
+table {
+    border-collapse: collapse;
+    width: 80%;
+    box-align: center;
+    
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+h2
+{
+    text-align: center;
+    color: rgb(16, 28, 190);
+    font: 1em sans-serif;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: rgb(51, 98, 172);
+    color: white;
+}
+
+.mat-column-right {
+    text-align: center;
+}
+th.mat-sort-header-sorted {
+    color: black;
+}
+  body, html {
+    height: 1080px;
+  }
+  .bg {
+    /* The image used */
+    background-image: url("../confirmation/PEI-Taxi-Cabs1.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

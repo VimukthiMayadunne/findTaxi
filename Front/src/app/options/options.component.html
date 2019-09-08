@@ -1,0 +1,46 @@
+<body>
+<div class="bg">
+
+<div>
+  <br>
+    <h2>Select the preffered Ride</h2>
+
+    <table align="center" mat-table [dataSource]="taxis" matSort>
+        <ng-container matColumnDef="vehicalType">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Vehical Type</th>
+            <td mat-cell *matCellDef="let element"> {{element.vehicalType}} </td>
+          </ng-container>
+
+      <ng-container matColumnDef="company">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header>Company Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+      </ng-container>
+      <ng-container matColumnDef="rideType">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header>Ride Type</th>
+        <td mat-cell *matCellDef="let element"> {{element.rideType}} </td>
+      </ng-container>
+     
+
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header>Estimated Price</th>
+        <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="waitingTime">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Waiting Time</th>
+        <td mat-cell *matCellDef="let element"> {{element.waitingTime}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="mat-column-right">Actions</th>
+        <td mat-cell *matCellDef="let element" class="mat-column-right">
+          <button mat-button color="primary" (click)="selectTaxi(element.rideType,element.waitingTime,element.amount)">Select The Ride</button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+</div>
+</div>
+</body>
