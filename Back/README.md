@@ -1,5 +1,5 @@
 # backEnd
-Back End Project for the level 2 
+Back End of the sample project
 
 npm install to install allthe dependncies
 
