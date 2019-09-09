@@ -14,7 +14,7 @@ export class ServiceService {
       units: 'imperial',
       origins: lat1,lng1,
       destinations: lat2,lng2,
-      key: '%20AIzaSyA4PM83juTN4e0c04Pg0axBaeBngZpwRk4' }
+      key: 'Your Google Api key' }
   return this.http.post(`https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=${lat1},${lng1}&destinations=${lat2}%2C${lng2}&key=%20AIzaSyA4PM83juTN4e0c04Pg0axBaeBngZpwRk4`,reqd);
   }
   getTypes():Observable<Taxi[]> {
